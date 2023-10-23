@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */; };
-		2CE623DB2AE65E7B007CCB76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623DA2AE65E7B007CCB76 /* ContentView.swift */; };
+		2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623DA2AE65E7B007CCB76 /* TickerList.swift */; };
 		2CE623DD2AE65E7D007CCB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */; };
 		2CE623E02AE65E7D007CCB76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE623DF2AE65E7D007CCB76 /* Preview Assets.xcassets */; };
+		2CE624032AE6681A007CCB76 /* TickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624022AE6681A007CCB76 /* TickerRow.swift */; };
+		2CE624052AE66840007CCB76 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624042AE66840007CCB76 /* Ticker.swift */; };
+		2CE624072AE66E43007CCB76 /* Ticker+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */; };
+		2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240A2AE67547007CCB76 /* TickerListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CE623D52AE65E7B007CCB76 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
-		2CE623DA2AE65E7B007CCB76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CE623DA2AE65E7B007CCB76 /* TickerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerList.swift; sourceTree = "<group>"; };
 		2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE623DF2AE65E7D007CCB76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE624022AE6681A007CCB76 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
+		2CE624042AE66840007CCB76 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Preview.swift"; sourceTree = "<group>"; };
+		2CE6240A2AE67547007CCB76 /* TickerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,11 @@
 		2CE623D72AE65E7B007CCB76 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */,
-				2CE623DA2AE65E7B007CCB76 /* ContentView.swift */,
 				2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */,
+				2CE6240C2AE6757C007CCB76 /* Models */,
 				2CE623DE2AE65E7D007CCB76 /* Preview Content */,
+				2CE624092AE67539007CCB76 /* View Models */,
+				2CE624082AE67533007CCB76 /* Views */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -63,8 +72,35 @@
 			isa = PBXGroup;
 			children = (
 				2CE623DF2AE65E7D007CCB76 /* Preview Assets.xcassets */,
+				2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CE624082AE67533007CCB76 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */,
+				2CE623DA2AE65E7B007CCB76 /* TickerList.swift */,
+				2CE624022AE6681A007CCB76 /* TickerRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CE624092AE67539007CCB76 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CE6240A2AE67547007CCB76 /* TickerListModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		2CE6240C2AE6757C007CCB76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CE624042AE66840007CCB76 /* Ticker.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CE623DB2AE65E7B007CCB76 /* ContentView.swift in Sources */,
+				2CE624052AE66840007CCB76 /* Ticker.swift in Sources */,
+				2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */,
+				2CE624032AE6681A007CCB76 /* TickerRow.swift in Sources */,
+				2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,
+				2CE624072AE66E43007CCB76 /* Ticker+Preview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
