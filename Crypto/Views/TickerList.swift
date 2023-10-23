@@ -14,8 +14,13 @@ struct TickerList: View {
 
     var body: some View {
         NavigationStack {
-            List(viewModel.tickers) { ticker in
-                TickerRow(ticker: ticker, currency: selectedCurrency)
+            List {
+                if viewModel.isRefreshing && viewModel.tickers.isEmpty == true {
+                    ProgressRow()
+                }
+                ForEach(viewModel.tickers) { ticker in
+                    TickerRow(ticker: ticker, currency: selectedCurrency)
+                }
             }
             .navigationTitle("Currencies")
             .task {
@@ -42,9 +47,9 @@ struct TickerList: View {
     private var currencyButton: some View {
         Button(action: toggleCurrency) {
             if selectedCurrency == .usd {
-                Label("SEK", systemImage: "swedishkronasign.arrow.circlepath")
+                Label("Switch to SEK", systemImage: "swedishkronasign.arrow.circlepath")
             } else {
-                Label("USD", systemImage: "dollarsign.arrow.circlepath")
+                Label("Switch to USD", systemImage: "dollarsign.arrow.circlepath")
             }
         }
     }

@@ -18,6 +18,7 @@
 		2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240D2AE6797A007CCB76 /* TickerStore.swift */; };
 		2CE624102AE68327007CCB76 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
 		2CE624122AE68358007CCB76 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624112AE68358007CCB76 /* Currency.swift */; };
+		2CE624142AE69916007CCB76 /* ProgressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624132AE69916007CCB76 /* ProgressRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2CE6240D2AE6797A007CCB76 /* TickerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerStore.swift; sourceTree = "<group>"; };
 		2CE6240F2AE68327007CCB76 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		2CE624112AE68358007CCB76 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		2CE624132AE69916007CCB76 /* ProgressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */,
 				2CE623DA2AE65E7B007CCB76 /* TickerList.swift */,
 				2CE624022AE6681A007CCB76 /* TickerRow.swift */,
+				2CE624132AE69916007CCB76 /* ProgressRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				2CE624102AE68327007CCB76 /* Price.swift in Sources */,
 				2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */,
 				2CE624032AE6681A007CCB76 /* TickerRow.swift in Sources */,
+				2CE624142AE69916007CCB76 /* ProgressRow.swift in Sources */,
 				2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */,
 				2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,

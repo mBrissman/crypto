@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 @Observable
 final class TickerListModel {
@@ -13,14 +14,22 @@ final class TickerListModel {
     private let store = TickerStore()
 
     var tickers: [Ticker] = []
+    var isRefreshing: Bool = false
 
     init(tickers: [Ticker] = []) {
         self.tickers = tickers
     }
 
     func refresh() async {
+        
+        isRefreshing = true
+        defer { isRefreshing = false }
+
         do {
-            tickers = try await store.tickers()
+            let tickers = try await store.tickers()
+            withAnimation {
+                self.tickers = tickers
+            }
         } catch {
             // TODO: Handle error properly
             print(error)
