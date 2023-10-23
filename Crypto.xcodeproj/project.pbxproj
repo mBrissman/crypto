@@ -22,7 +22,21 @@
 		2CE624162AE69A91007CCB76 /* TickerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */; };
 		2CE624182AE6A9A2007CCB76 /* SwitchCurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */; };
 		2CE6241A2AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624192AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift */; };
+		2CE624222AE6B9D1007CCB76 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624212AE6B9D1007CCB76 /* CryptoTests.swift */; };
+		2CE624292AE6BB2C007CCB76 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624042AE66840007CCB76 /* Ticker.swift */; };
+		2CE6242A2AE6BB40007CCB76 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624112AE68358007CCB76 /* Currency.swift */; };
+		2CE6242B2AE6BB4B007CCB76 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CE624232AE6B9D1007CCB76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CE623CD2AE65E7B007CCB76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CE623D42AE65E7B007CCB76;
+			remoteInfo = Crypto;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2CE623D52AE65E7B007CCB76 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,10 +55,19 @@
 		2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsView.swift; sourceTree = "<group>"; };
 		2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCurrencyButton.swift; sourceTree = "<group>"; };
 		2CE624192AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEnvironmentKey.swift; sourceTree = "<group>"; };
+		2CE6241F2AE6B9D1007CCB76 /* CryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE624212AE6B9D1007CCB76 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2CE623D22AE65E7B007CCB76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE6241C2AE6B9D1007CCB76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE623D72AE65E7B007CCB76 /* Crypto */,
+				2CE624202AE6B9D1007CCB76 /* CryptoTests */,
 				2CE623D62AE65E7B007CCB76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE623D52AE65E7B007CCB76 /* Crypto.app */,
+				2CE6241F2AE6B9D1007CCB76 /* CryptoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +149,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2CE624202AE6B9D1007CCB76 /* CryptoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CE624212AE6B9D1007CCB76 /* CryptoTests.swift */,
+			);
+			path = CryptoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +177,24 @@
 			productReference = 2CE623D52AE65E7B007CCB76 /* Crypto.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CE6241E2AE6B9D1007CCB76 /* CryptoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CE624252AE6B9D1007CCB76 /* Build configuration list for PBXNativeTarget "CryptoTests" */;
+			buildPhases = (
+				2CE6241B2AE6B9D1007CCB76 /* Sources */,
+				2CE6241C2AE6B9D1007CCB76 /* Frameworks */,
+				2CE6241D2AE6B9D1007CCB76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CE624242AE6B9D1007CCB76 /* PBXTargetDependency */,
+			);
+			name = CryptoTests;
+			productName = CryptoTests;
+			productReference = 2CE6241F2AE6B9D1007CCB76 /* CryptoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +206,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					2CE623D42AE65E7B007CCB76 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					2CE6241E2AE6B9D1007CCB76 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -173,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				2CE623D42AE65E7B007CCB76 /* Crypto */,
+				2CE6241E2AE6B9D1007CCB76 /* CryptoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +239,13 @@
 			files = (
 				2CE623E02AE65E7D007CCB76 /* Preview Assets.xcassets in Resources */,
 				2CE623DD2AE65E7D007CCB76 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE6241D2AE6B9D1007CCB76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +272,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CE6241B2AE6B9D1007CCB76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE6242A2AE6BB40007CCB76 /* Currency.swift in Sources */,
+				2CE6242B2AE6BB4B007CCB76 /* Price.swift in Sources */,
+				2CE624222AE6B9D1007CCB76 /* CryptoTests.swift in Sources */,
+				2CE624292AE6BB2C007CCB76 /* Ticker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CE624242AE6B9D1007CCB76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CE623D42AE65E7B007CCB76 /* Crypto */;
+			targetProxy = 2CE624232AE6B9D1007CCB76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2CE623F72AE65E7E007CCB76 /* Debug */ = {
@@ -390,6 +471,38 @@
 			};
 			name = Release;
 		};
+		2CE624262AE6B9D1007CCB76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ZWDAPA7US;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.northernsquare.CryptoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CE624272AE6B9D1007CCB76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ZWDAPA7US;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.northernsquare.CryptoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -407,6 +520,15 @@
 			buildConfigurations = (
 				2CE623FA2AE65E7E007CCB76 /* Debug */,
 				2CE623FB2AE65E7E007CCB76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CE624252AE6B9D1007CCB76 /* Build configuration list for PBXNativeTarget "CryptoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE624262AE6B9D1007CCB76 /* Debug */,
+				2CE624272AE6B9D1007CCB76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
