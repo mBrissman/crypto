@@ -15,16 +15,17 @@ struct TickerList: View {
     var body: some View {
         NavigationStack {
             List {
-                if viewModel.isRefreshing && viewModel.tickers.isEmpty == true {
+                if viewModel.isRefreshing && viewModel.filteredTickers.isEmpty == true {
                     ProgressRow()
                 }
-                ForEach(viewModel.tickers) { ticker in
+                ForEach(viewModel.filteredTickers) { ticker in
                     NavigationLink(
                         destination: { TickerDetailsView(ticker: ticker, currency: selectedCurrency) },
                         label: { TickerRow(ticker: ticker, currency: selectedCurrency) }
                     )
                 }
             }
+            .searchable(text: $viewModel.searchText)
             .navigationTitle("Currencies")
             .task {
                 await viewModel.refresh()

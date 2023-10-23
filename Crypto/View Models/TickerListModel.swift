@@ -11,10 +11,16 @@ import SwiftUI
 @Observable
 final class TickerListModel {
 
-    private let store = TickerStore()
+    @ObservationIgnored private let store = TickerStore()
 
-    var tickers: [Ticker] = []
+    private var tickers: [Ticker] = []
     var isRefreshing: Bool = false
+    var searchText: String = ""
+
+    var filteredTickers: [Ticker] {
+        guard searchText.isEmpty == false else { return tickers }
+        return tickers.filter { $0.name.localizedStandardContains(searchText) }
+    }
 
     init(tickers: [Ticker] = []) {
         self.tickers = tickers
