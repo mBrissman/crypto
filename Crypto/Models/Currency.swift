@@ -8,11 +8,15 @@
 import Foundation
 
 struct Currency: Equatable {
+
+    /// Currency ISO code.
     let code: String
-    let amountPerDollar: Double
+
+    /// Exchange rate from one dollar to the currency.
+    let exchangeRate: Double
 }
 
 extension Currency {
-    static let sek = Currency(code: "sek", amountPerDollar: 11.0428)
-    static let usd = Currency(code: "usd", amountPerDollar: 1)
+    static let sek = Currency(code: "sek", exchangeRate: 11.0428)
+    static let usd = Currency(code: "usd", exchangeRate: 1)
 }

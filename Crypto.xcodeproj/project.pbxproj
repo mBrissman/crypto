@@ -13,7 +13,7 @@
 		2CE623E02AE65E7D007CCB76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE623DF2AE65E7D007CCB76 /* Preview Assets.xcassets */; };
 		2CE624032AE6681A007CCB76 /* TickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624022AE6681A007CCB76 /* TickerRow.swift */; };
 		2CE624052AE66840007CCB76 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624042AE66840007CCB76 /* Ticker.swift */; };
-		2CE624072AE66E43007CCB76 /* Ticker+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */; };
+		2CE624072AE66E43007CCB76 /* Ticker+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624062AE66E43007CCB76 /* Ticker+Previews.swift */; };
 		2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240A2AE67547007CCB76 /* TickerListModel.swift */; };
 		2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240D2AE6797A007CCB76 /* TickerStore.swift */; };
 		2CE624102AE68327007CCB76 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
@@ -32,7 +32,7 @@
 		2CE623DF2AE65E7D007CCB76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CE624022AE6681A007CCB76 /* TickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRow.swift; sourceTree = "<group>"; };
 		2CE624042AE66840007CCB76 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
-		2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Preview.swift"; sourceTree = "<group>"; };
+		2CE624062AE66E43007CCB76 /* Ticker+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Previews.swift"; sourceTree = "<group>"; };
 		2CE6240A2AE67547007CCB76 /* TickerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListModel.swift; sourceTree = "<group>"; };
 		2CE6240D2AE6797A007CCB76 /* TickerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerStore.swift; sourceTree = "<group>"; };
 		2CE6240F2AE68327007CCB76 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE623DF2AE65E7D007CCB76 /* Preview Assets.xcassets */,
-				2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */,
+				2CE624062AE66E43007CCB76 /* Ticker+Previews.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 				2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,
 				2CE624182AE6A9A2007CCB76 /* SwitchCurrencyButton.swift in Sources */,
-				2CE624072AE66E43007CCB76 /* Ticker+Preview.swift in Sources */,
+				2CE624072AE66E43007CCB76 /* Ticker+Previews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

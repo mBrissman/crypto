@@ -1,5 +1,5 @@
 //
-//  Ticker+Preview.swift
+//  Ticker+Previews.swift
 //  Crypto
 //
 //  Created by Marcus Brissman on 2023-10-23.
@@ -24,7 +24,7 @@ extension Ticker {
         Ticker(
             id: UUID().uuidString,
             name: name,
-            percentChange24Hours: Double.random(in: -0.99...0.99),
+            percentChange24Hours: Double.random(in: -0.10...0.10),
             price: Price(
                 amount: Double.random(in: 0...99999),
                 currency: .usd

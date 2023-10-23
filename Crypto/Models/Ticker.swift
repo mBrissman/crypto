@@ -63,7 +63,7 @@ extension Ticker {
 
     /// Returns price converted to currency.
     func price(with currency: Currency) -> Price {
-        Price(amount: price.amount * currency.amountPerDollar, currency: currency)
+        Price(amount: price.amount * currency.exchangeRate, currency: currency)
     }
 }
 

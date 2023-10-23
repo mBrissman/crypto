@@ -5,7 +5,6 @@
 //  Created by Marcus Brissman on 2023-10-23.
 //
 
-import Foundation
 import SwiftUI
 
 @Observable
@@ -17,6 +16,7 @@ final class TickerListModel {
     var isRefreshing: Bool = false
     var searchText: String = ""
 
+    /// Tickers filtered on search text. Returns all if search text is empty.
     var filteredTickers: [Ticker] {
         guard searchText.isEmpty == false else { return tickers }
         return tickers.filter { $0.name.localizedStandardContains(searchText) }
@@ -26,6 +26,7 @@ final class TickerListModel {
         self.tickers = tickers
     }
 
+    /// Fetches tickers asynchronously. The result is populated with animation.
     func refresh() async {
         
         isRefreshing = true

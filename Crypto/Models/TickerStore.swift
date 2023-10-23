@@ -12,11 +12,13 @@ final class TickerStore {
     private let session = URLSession(configuration: .default)
     private let decoder = JSONDecoder()
 
+    /// Retrieves crypto currency tickers and delivers the data asynchronously.
     func tickers() async throws -> [Ticker] {
         guard let url = URL(string: "https://api.coinlore.net/api/tickers/") else {
             throw TickerStoreError.invalidURL
         }
 
+        // TODO: Handle http status codes
         let (data, _) = try await session.data(from: url)
         let response = try decoder.decode(TickersResponse.self, from: data)
 
