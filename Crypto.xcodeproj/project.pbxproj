@@ -15,6 +15,7 @@
 		2CE624052AE66840007CCB76 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624042AE66840007CCB76 /* Ticker.swift */; };
 		2CE624072AE66E43007CCB76 /* Ticker+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */; };
 		2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240A2AE67547007CCB76 /* TickerListModel.swift */; };
+		2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240D2AE6797A007CCB76 /* TickerStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2CE624042AE66840007CCB76 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		2CE624062AE66E43007CCB76 /* Ticker+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Preview.swift"; sourceTree = "<group>"; };
 		2CE6240A2AE67547007CCB76 /* TickerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListModel.swift; sourceTree = "<group>"; };
+		2CE6240D2AE6797A007CCB76 /* TickerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE624042AE66840007CCB76 /* Ticker.swift */,
+				2CE6240D2AE6797A007CCB76 /* TickerStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */,
 				2CE624032AE6681A007CCB76 /* TickerRow.swift in Sources */,
 				2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */,
+				2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,
 				2CE624072AE66E43007CCB76 /* Ticker+Preview.swift in Sources */,
 			);

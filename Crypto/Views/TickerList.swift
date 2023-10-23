@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TickerList: View {
-    
+
     @State var viewModel: TickerListModel
 
     var body: some View {
@@ -16,7 +16,10 @@ struct TickerList: View {
             List(viewModel.tickers) { ticker in
                 TickerRow(ticker: ticker)
             }
-            .navigationTitle("Latest")
+            .navigationTitle("Currencies")
+            .task {
+                await viewModel.refresh()
+            }
         }
     }
 }

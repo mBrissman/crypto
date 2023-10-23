@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CryptoApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            TickerList(viewModel: TickerListModel(tickers: Ticker.previews))
+            TickerList(viewModel: TickerListModel())
         }
     }
 }
