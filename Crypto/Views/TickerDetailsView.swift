@@ -30,7 +30,7 @@ struct TickerDetailsView: View {
                 Text(ticker.percentChange24Hours, format: .percent)
                     .foregroundStyle(ValueChangeStyle(value: ticker.percentChange24Hours))
                     .fontWeight(.bold)
-                Spacer()
+
             }
             .padding(.horizontal)
             .font(.subheadline)
@@ -45,21 +45,5 @@ struct TickerDetailsView: View {
 #Preview {
     NavigationStack {
         TickerDetailsView(ticker: .preview)
-    }
-}
-
-struct ValueChangeStyle: ShapeStyle {
-
-    let value: Double
-
-    func resolve(in environment: EnvironmentValues) -> some ShapeStyle {
-        switch value {
-        case let x where x > 0:
-            return Color(.systemGreen)
-        case let x where x < 0:
-            return Color(.systemRed)
-        default:
-            return Color(.secondaryLabel)
-        }
     }
 }
