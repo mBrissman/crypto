@@ -11,9 +11,9 @@ struct Ticker: Identifiable {
 
     let id: String
     let name: String
-    let price: Double
+    let price: Price
 
-    init(id: String, name: String, price: Double) {
+    init(id: String, name: String, price: Price) {
         self.id = id
         self.name = name
         self.price = price
@@ -33,13 +33,22 @@ extension Ticker: Decodable {
         self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
 
-        // Convert price string to double
-        let priceString = try container.decode(String.self, forKey: .price)
-        if let price = Double(priceString) {
-            self.price = price
+        // Convert price string to price object
+        let amountString = try container.decode(String.self, forKey: .price)
+
+        if let amount = Double(amountString) {
+            self.price = Price(amount: amount, currency: .usd)
         } else {
             throw TickerError.invalidPriceFormat
         }
+    }
+}
+
+extension Ticker {
+
+    /// Returns price converted to currency.
+    func price(with currency: Currency) -> Price {
+        Price(amount: price.amount * currency.amountPerDollar, currency: currency)
     }
 }
 

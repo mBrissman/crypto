@@ -14,7 +14,7 @@ struct TickerList: View {
     var body: some View {
         NavigationStack {
             List(viewModel.tickers) { ticker in
-                TickerRow(ticker: ticker)
+                TickerRow(ticker: ticker, currency: .usd)
             }
             .navigationTitle("Currencies")
             .task {

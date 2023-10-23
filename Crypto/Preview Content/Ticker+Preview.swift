@@ -24,7 +24,10 @@ extension Ticker {
         Ticker(
             id: UUID().uuidString,
             name: name,
-            price: Double.random(in: 0...99999)
+            price: Price(
+                amount: Double.random(in: 0...99999),
+                currency: .usd
+            )
         )
     }
 }

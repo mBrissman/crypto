@@ -10,19 +10,25 @@ import SwiftUI
 struct TickerRow: View {
 
     let ticker: Ticker
+    let currency: Currency
+
+    private var price: Price {
+        ticker.price(with: currency)
+    }
 
     var body: some View {
         HStack {
             Text(ticker.name)
                 .font(.headline)
             Spacer()
-            Text(ticker.price, format: .currency(code: "usd"))
+            Text(price.amount, format: .currency(code: price.currency.code))
         }
     }
 }
 
 #Preview {
     List {
-        TickerRow(ticker: .preview)
+        TickerRow(ticker: .preview, currency: .usd)
+        TickerRow(ticker: .preview, currency: .sek)
     }
 }
