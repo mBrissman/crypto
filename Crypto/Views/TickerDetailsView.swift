@@ -9,11 +9,12 @@ import SwiftUI
 
 struct TickerDetailsView: View {
 
+    @Environment(\.currency) var currency
+
     let ticker: Ticker
-    let currency: Currency
 
     var price: Price {
-        ticker.price(with: currency)
+        ticker.price(with: currency.wrappedValue)
     }
 
     var body: some View {
@@ -35,12 +36,15 @@ struct TickerDetailsView: View {
             .font(.subheadline)
         }
         .navigationTitle(ticker.name)
+        .toolbar {
+            SwitchCurrencyButton()
+        }
     }
 }
 
 #Preview {
     NavigationStack {
-        TickerDetailsView(ticker: .preview, currency: .usd)
+        TickerDetailsView(ticker: .preview)
     }
 }
 

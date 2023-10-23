@@ -9,11 +9,12 @@ import SwiftUI
 
 struct TickerRow: View {
 
+    @Environment(\.currency) var currency
+
     let ticker: Ticker
-    let currency: Currency
 
     private var price: Price {
-        ticker.price(with: currency)
+        ticker.price(with: currency.wrappedValue)
     }
 
     var body: some View {
@@ -28,7 +29,6 @@ struct TickerRow: View {
 
 #Preview {
     List {
-        TickerRow(ticker: .preview, currency: .usd)
-        TickerRow(ticker: .preview, currency: .sek)
+        TickerRow(ticker: .preview)
     }
 }
