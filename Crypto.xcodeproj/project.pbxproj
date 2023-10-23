@@ -19,6 +19,7 @@
 		2CE624102AE68327007CCB76 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
 		2CE624122AE68358007CCB76 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624112AE68358007CCB76 /* Currency.swift */; };
 		2CE624142AE69916007CCB76 /* ProgressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624132AE69916007CCB76 /* ProgressRow.swift */; };
+		2CE624162AE69A91007CCB76 /* TickerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2CE6240F2AE68327007CCB76 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		2CE624112AE68358007CCB76 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2CE624132AE69916007CCB76 /* ProgressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRow.swift; sourceTree = "<group>"; };
+		2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				2CE623DA2AE65E7B007CCB76 /* TickerList.swift */,
 				2CE624022AE6681A007CCB76 /* TickerRow.swift */,
 				2CE624132AE69916007CCB76 /* ProgressRow.swift */,
+				2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE624162AE69A91007CCB76 /* TickerDetailsView.swift in Sources */,
 				2CE624122AE68358007CCB76 /* Currency.swift in Sources */,
 				2CE624052AE66840007CCB76 /* Ticker.swift in Sources */,
 				2CE624102AE68327007CCB76 /* Price.swift in Sources */,

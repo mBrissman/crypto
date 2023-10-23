@@ -19,7 +19,10 @@ struct TickerList: View {
                     ProgressRow()
                 }
                 ForEach(viewModel.tickers) { ticker in
-                    TickerRow(ticker: ticker, currency: selectedCurrency)
+                    NavigationLink(
+                        destination: { TickerDetailsView(ticker: ticker, currency: selectedCurrency) },
+                        label: { TickerRow(ticker: ticker, currency: selectedCurrency) }
+                    )
                 }
             }
             .navigationTitle("Currencies")
