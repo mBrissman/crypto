@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An object that coordinates requests to the Coin Lore API.
 final class APISession {
 
     private let session = URLSession(configuration: .default)
