@@ -11,14 +11,18 @@ struct Ticker: Identifiable {
 
     let id: String
     let name: String
-    let percentChange24Hours: Double
+    let percentChangeSinceOneHour: Double
+    let percentChangeSinceOneDay: Double
+    let percentChangeSinceOneWeek: Double
     let price: Price
     let symbol: String
 
-    init(id: String, name: String, percentChange24Hours: Double, price: Price, symbol: String) {
+    init(id: String, name: String, percentChangeSinceOneHour: Double, percentChangeSinceOneDay: Double, percentChangeSinceOneWeek: Double, price: Price, symbol: String) {
         self.id = id
         self.name = name
-        self.percentChange24Hours = percentChange24Hours
+        self.percentChangeSinceOneHour = percentChangeSinceOneHour
+        self.percentChangeSinceOneDay = percentChangeSinceOneDay
+        self.percentChangeSinceOneWeek = percentChangeSinceOneWeek
         self.price = price
         self.symbol = symbol
     }
@@ -29,7 +33,9 @@ extension Ticker: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case percentChange24Hours = "percent_change_24h"
+        case percentChangeSinceOneDay = "percent_change_24h"
+        case percentChangeSinceOneHour = "percent_change_1h"
+        case percentChangeSinceOneWeek = "percent_change_7d"
         case price = "price_usd"
         case symbol
     }
@@ -40,22 +46,14 @@ extension Ticker: Decodable {
         self.name = try container.decode(String.self, forKey: .name)
         self.symbol = try container.decode(String.self, forKey: .symbol)
 
-        // Convert change string to double
-        let percentChange24HoursString = try container.decode(String.self, forKey: .percentChange24Hours)
-        if let change = Double(percentChange24HoursString) {
-            self.percentChange24Hours = change / 100
-        } else {
-            throw TickerError.cannotConvertString
-        }
+        // Convert change strings to double
+        self.percentChangeSinceOneHour = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneHour)
+        self.percentChangeSinceOneDay = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneDay)
+        self.percentChangeSinceOneWeek = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneWeek)
 
         // Convert price string to price object
-        let amountString = try container.decode(String.self, forKey: .price)
-
-        if let amount = Double(amountString) {
-            self.price = Price(amount: amount, currency: .usd)
-        } else {
-            throw TickerError.cannotConvertString
-        }
+        let amount = try container.decodeDoubleFromString(forKey: .price)
+        self.price = Price(amount: amount, currency: .usd)
     }
 }
 
@@ -67,6 +65,19 @@ extension Ticker {
     }
 }
 
-enum TickerError: Error {
+private extension KeyedDecodingContainer {
+
+    /// Convenience function for decoding a string from key and then converting it to a double.
+    func decodeDoubleFromString(forKey key: KeyedDecodingContainer<K>.Key) throws -> Double {
+        let string = try decode(String.self, forKey: key)
+        if let double = Double(string) {
+            return double
+        } else {
+            throw KeyedDecodingContainerError.cannotConvertString
+        }
+    }
+}
+
+enum KeyedDecodingContainerError: Error {
     case cannotConvertString
 }

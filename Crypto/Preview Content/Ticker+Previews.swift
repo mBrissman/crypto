@@ -24,7 +24,9 @@ extension Ticker {
         Ticker(
             id: UUID().uuidString,
             name: name,
-            percentChange24Hours: Double.random(in: -0.10...0.10),
+            percentChangeSinceOneHour: 0.234,
+            percentChangeSinceOneDay: 0,
+            percentChangeSinceOneWeek: -0.045,
             price: Price(
                 amount: Double.random(in: 0...99999),
                 currency: .usd

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C1C35B72AF5654900871246 /* GroupedBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */; };
+		2C1C35BD2AF5B27E00871246 /* PercentChangeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C35BC2AF5B27E00871246 /* PercentChangeRow.swift */; };
 		2C3774282AF546C3001026E3 /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */; };
 		2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */; };
 		2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623DA2AE65E7B007CCB76 /* TickerList.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedBackgroundStyle.swift; sourceTree = "<group>"; };
+		2C1C35BC2AF5B27E00871246 /* PercentChangeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentChangeRow.swift; sourceTree = "<group>"; };
 		2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModifier.swift; sourceTree = "<group>"; };
 		2CE623D52AE65E7B007CCB76 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		2C3774252AF5465A001026E3 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				2C1C35BC2AF5B27E00871246 /* PercentChangeRow.swift */,
 				2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */,
 				2CE624022AE6681A007CCB76 /* TickerRow.swift */,
 			);
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1C35BD2AF5B27E00871246 /* PercentChangeRow.swift in Sources */,
 				2CE624162AE69A91007CCB76 /* TickerDetailsView.swift in Sources */,
 				2CE624122AE68358007CCB76 /* Currency.swift in Sources */,
 				2CE624052AE66840007CCB76 /* Ticker.swift in Sources */,
