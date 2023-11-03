@@ -27,10 +27,9 @@ struct TickerList: View {
                 }
             }
             .searchable(text: $viewModel.searchText)
+            .refreshable(action: viewModel.refresh)
             .navigationTitle("Currencies")
-            .task {
-                await viewModel.refresh()
-            }
+            .task(viewModel.refresh)
             .toolbar {
                 SwitchCurrencyButton()
             }

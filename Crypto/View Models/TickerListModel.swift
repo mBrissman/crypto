@@ -29,6 +29,7 @@ final class TickerListModel {
     }
 
     /// Fetches tickers asynchronously. The result is populated with animation.
+    @Sendable
     func refresh() async {
         
         isRefreshing = true
