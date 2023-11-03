@@ -15,7 +15,7 @@ struct CryptoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TickerList(viewModel: TickerListModel())
+            TickerList()
                 .currency($currency)
         }
     }

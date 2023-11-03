@@ -9,27 +9,20 @@ import SwiftUI
 
 struct TickerList: View {
 
-    @State var viewModel: TickerListModel
+    @State var viewModel = TickerListModel()
 
     var body: some View {
         NavigationStack {
-            List {
-                // TODO: Add error and empty state
-                if viewModel.isRefreshing && viewModel.filteredTickers.isEmpty == true {
-                    ProgressRow()
-                } else {
-                    ForEach(viewModel.filteredTickers) { ticker in
-                        NavigationLink(
-                            destination: { TickerDetailsView(ticker: ticker) },
-                            label: { TickerRow(ticker: ticker) }
-                        )
-                    }
-                }
+            List(viewModel.filteredTickers) { ticker in
+                NavigationLink(
+                    destination: { TickerDetailsView(ticker: ticker) },
+                    label: { TickerRow(ticker: ticker) }
+                )
             }
             .searchable(text: $viewModel.searchText)
-            .refreshable(action: viewModel.refresh)
             .navigationTitle("Currencies")
             .task(viewModel.refresh)
+            .overlay(content: emptyView)
             .toolbar {
                 SwitchCurrencyButton()
             }
@@ -39,8 +32,21 @@ struct TickerList: View {
             )
         }
     }
+
+    @ViewBuilder
+    private func emptyView() -> some View {
+        if viewModel.filteredTickers.isEmpty {
+            if viewModel.isRefreshing {
+                ProgressView()
+            } else {
+                Text("No currencies found")
+                    .font(.headline)
+                    .foregroundStyle(.secondary)
+            }
+        }
+    }
 }
 
 #Preview {
-    TickerList(viewModel: TickerListModel(tickers: Ticker.previews))
+    TickerList(viewModel: TickerListModel())
 }

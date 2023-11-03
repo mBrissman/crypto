@@ -24,10 +24,6 @@ final class TickerListModel {
         return tickers.filter { $0.name.localizedStandardContains(searchText) }
     }
 
-    init(tickers: [Ticker] = []) {
-        self.tickers = tickers
-    }
-
     /// Fetches tickers asynchronously. The result is populated with animation.
     @Sendable
     func refresh() async {
@@ -40,6 +36,9 @@ final class TickerListModel {
             withAnimation {
                 self.tickers = tickers
             }
+        } catch is CancellationError {
+            // Task cancelled. Ignore it.
+            return
         } catch {
             latestError = error
             errorIsPresented = true
