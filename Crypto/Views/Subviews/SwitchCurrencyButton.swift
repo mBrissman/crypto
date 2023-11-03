@@ -8,7 +8,6 @@
 import SwiftUI
 
 /// Button used to switch environment currency.
-/// - Note: This button will not work for previews. The binding is set in the app scene.
 struct SwitchCurrencyButton: View {
 
     @Environment(\.currency) var currency
