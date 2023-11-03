@@ -10,7 +10,7 @@ import SwiftUI
 @Observable
 final class TickerListModel {
 
-    @ObservationIgnored private let store = TickerStore()
+    private let apiSession = APISession()
 
     private var tickers: [Ticker] = []
     var isRefreshing: Bool = false
@@ -33,7 +33,7 @@ final class TickerListModel {
         defer { isRefreshing = false }
 
         do {
-            let tickers = try await store.tickers()
+            let tickers = try await apiSession.tickers()
             withAnimation {
                 self.tickers = tickers
             }

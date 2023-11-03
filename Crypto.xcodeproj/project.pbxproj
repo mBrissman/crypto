@@ -15,7 +15,7 @@
 		2CE624052AE66840007CCB76 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624042AE66840007CCB76 /* Ticker.swift */; };
 		2CE624072AE66E43007CCB76 /* Ticker+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624062AE66E43007CCB76 /* Ticker+Previews.swift */; };
 		2CE6240B2AE67547007CCB76 /* TickerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240A2AE67547007CCB76 /* TickerListModel.swift */; };
-		2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240D2AE6797A007CCB76 /* TickerStore.swift */; };
+		2CE6240E2AE6797A007CCB76 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240D2AE6797A007CCB76 /* APISession.swift */; };
 		2CE624102AE68327007CCB76 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
 		2CE624122AE68358007CCB76 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624112AE68358007CCB76 /* Currency.swift */; };
 		2CE624142AE69916007CCB76 /* ProgressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624132AE69916007CCB76 /* ProgressRow.swift */; };
@@ -49,7 +49,7 @@
 		2CE624042AE66840007CCB76 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		2CE624062AE66E43007CCB76 /* Ticker+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Previews.swift"; sourceTree = "<group>"; };
 		2CE6240A2AE67547007CCB76 /* TickerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListModel.swift; sourceTree = "<group>"; };
-		2CE6240D2AE6797A007CCB76 /* TickerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerStore.swift; sourceTree = "<group>"; };
+		2CE6240D2AE6797A007CCB76 /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		2CE6240F2AE68327007CCB76 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		2CE624112AE68358007CCB76 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		2CE624132AE69916007CCB76 /* ProgressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRow.swift; sourceTree = "<group>"; };
@@ -101,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */,
+				2CEC4C292AF530A400AE49C1 /* Networking */,
+				2CEC4C282AF52C1E00AE49C1 /* Environment */,
 				2CE6240C2AE6757C007CCB76 /* Models */,
 				2CE623DE2AE65E7D007CCB76 /* Preview Content */,
 				2CE6242C2AE6BD82007CCB76 /* Shape Styles */,
@@ -144,10 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				2CE624112AE68358007CCB76 /* Currency.swift */,
-				2CE624192AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift */,
 				2CE6240F2AE68327007CCB76 /* Price.swift */,
 				2CE624042AE66840007CCB76 /* Ticker.swift */,
-				2CE6240D2AE6797A007CCB76 /* TickerStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +166,22 @@
 				2CE6242D2AE6BDA4007CCB76 /* ValueChangeStyle.swift */,
 			);
 			path = "Shape Styles";
+			sourceTree = "<group>";
+		};
+		2CEC4C282AF52C1E00AE49C1 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				2CE624192AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		2CEC4C292AF530A400AE49C1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2CE6240D2AE6797A007CCB76 /* APISession.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +293,7 @@
 				2CE6242E2AE6BDA4007CCB76 /* ValueChangeStyle.swift in Sources */,
 				2CE624142AE69916007CCB76 /* ProgressRow.swift in Sources */,
 				2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */,
-				2CE6240E2AE6797A007CCB76 /* TickerStore.swift in Sources */,
+				2CE6240E2AE6797A007CCB76 /* APISession.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,
 				2CE624182AE6A9A2007CCB76 /* SwitchCurrencyButton.swift in Sources */,
 				2CE624072AE66E43007CCB76 /* Ticker+Previews.swift in Sources */,
