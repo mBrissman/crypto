@@ -157,8 +157,8 @@
 		2CE624082AE67533007CCB76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C3774252AF5465A001026E3 /* Subviews */,
 				2C3774242AF54655001026E3 /* Screens */,
+				2C3774252AF5465A001026E3 /* Subviews */,
 			);
 			path = Views;
 			sourceTree = "<group>";

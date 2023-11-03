@@ -23,3 +23,10 @@ struct ValueChangeStyle: ShapeStyle {
         }
     }
 }
+
+extension ShapeStyle where Self == ValueChangeStyle {
+    
+    static func valueChange(for value: Double) -> ValueChangeStyle {
+        ValueChangeStyle(value: value)
+    }
+}

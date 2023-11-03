@@ -28,7 +28,7 @@ struct TickerDetailsView: View {
                 }
                 .foregroundColor(.secondary)
                 Text(ticker.percentChange24Hours, format: .percent)
-                    .foregroundStyle(ValueChangeStyle(value: ticker.percentChange24Hours))
+                    .foregroundStyle(.valueChange(for: ticker.percentChange24Hours))
                     .fontWeight(.bold)
 
             }
