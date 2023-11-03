@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3774282AF546C3001026E3 /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */; };
 		2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */; };
 		2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623DA2AE65E7B007CCB76 /* TickerList.swift */; };
 		2CE623DD2AE65E7D007CCB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModifier.swift; sourceTree = "<group>"; };
 		2CE623D52AE65E7B007CCB76 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		2CE623DA2AE65E7B007CCB76 /* TickerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerList.swift; sourceTree = "<group>"; };
@@ -79,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3774242AF54655001026E3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */,
+				2CE623DA2AE65E7B007CCB76 /* TickerList.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2C3774252AF5465A001026E3 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				2CE624132AE69916007CCB76 /* ProgressRow.swift */,
+				2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */,
+				2CE624022AE6681A007CCB76 /* TickerRow.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		2C3774262AF546B3001026E3 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
 		2CE623CC2AE65E7B007CCB76 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +130,14 @@
 			isa = PBXGroup;
 			children = (
 				2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */,
-				2CEC4C292AF530A400AE49C1 /* Networking */,
+				2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */,
 				2CEC4C282AF52C1E00AE49C1 /* Environment */,
 				2CE6240C2AE6757C007CCB76 /* Models */,
+				2CEC4C292AF530A400AE49C1 /* Networking */,
 				2CE623DE2AE65E7D007CCB76 /* Preview Content */,
 				2CE6242C2AE6BD82007CCB76 /* Shape Styles */,
 				2CE624092AE67539007CCB76 /* View Models */,
+				2C3774262AF546B3001026E3 /* View Modifiers */,
 				2CE624082AE67533007CCB76 /* Views */,
 			);
 			path = Crypto;
@@ -124,12 +155,8 @@
 		2CE624082AE67533007CCB76 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */,
-				2CE624132AE69916007CCB76 /* ProgressRow.swift */,
-				2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */,
-				2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */,
-				2CE623DA2AE65E7B007CCB76 /* TickerList.swift */,
-				2CE624022AE6681A007CCB76 /* TickerRow.swift */,
+				2C3774252AF5465A001026E3 /* Subviews */,
+				2C3774242AF54655001026E3 /* Screens */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +319,7 @@
 				2CE624032AE6681A007CCB76 /* TickerRow.swift in Sources */,
 				2CE6242E2AE6BDA4007CCB76 /* ValueChangeStyle.swift in Sources */,
 				2CE624142AE69916007CCB76 /* ProgressRow.swift in Sources */,
+				2C3774282AF546C3001026E3 /* ErrorAlertModifier.swift in Sources */,
 				2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */,
 				2CE6240E2AE6797A007CCB76 /* APISession.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,

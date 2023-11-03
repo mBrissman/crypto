@@ -34,6 +34,10 @@ struct TickerList: View {
             .toolbar {
                 SwitchCurrencyButton()
             }
+            .errorAlert(
+                error: viewModel.latestError,
+                isPresented: $viewModel.errorIsPresented
+            )
         }
     }
 }

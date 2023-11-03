@@ -15,6 +15,8 @@ final class TickerListModel {
     private var tickers: [Ticker] = []
     var isRefreshing: Bool = false
     var searchText: String = ""
+    var latestError: Error?
+    var errorIsPresented: Bool = false
 
     /// Tickers filtered on search text. Returns all if search text is empty.
     var filteredTickers: [Ticker] {
@@ -38,8 +40,8 @@ final class TickerListModel {
                 self.tickers = tickers
             }
         } catch {
-            // TODO: Handle error properly
-            print(error)
+            latestError = error
+            errorIsPresented = true
         }
     }
 }
