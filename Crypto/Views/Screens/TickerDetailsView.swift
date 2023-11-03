@@ -36,6 +36,7 @@ struct TickerDetailsView: View {
             .font(.subheadline)
         }
         .navigationTitle(ticker.name)
+        .background(.groupedBackground)
         .toolbar {
             SwitchCurrencyButton()
         }

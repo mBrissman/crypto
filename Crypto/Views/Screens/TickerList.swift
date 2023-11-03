@@ -23,6 +23,7 @@ struct TickerList: View {
             .navigationTitle("Currencies")
             .task(viewModel.refresh)
             .overlay(content: emptyView)
+            .background(.groupedBackground)
             .toolbar {
                 SwitchCurrencyButton()
             }

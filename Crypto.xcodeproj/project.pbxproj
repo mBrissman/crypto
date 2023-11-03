@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1C35B72AF5654900871246 /* GroupedBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */; };
 		2C3774282AF546C3001026E3 /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */; };
 		2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */; };
 		2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623DA2AE65E7B007CCB76 /* TickerList.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedBackgroundStyle.swift; sourceTree = "<group>"; };
 		2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModifier.swift; sourceTree = "<group>"; };
 		2CE623D52AE65E7B007CCB76 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		2CE6242C2AE6BD82007CCB76 /* Shape Styles */ = {
 			isa = PBXGroup;
 			children = (
+				2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */,
 				2CE6242D2AE6BDA4007CCB76 /* ValueChangeStyle.swift */,
 			);
 			path = "Shape Styles";
@@ -324,6 +327,7 @@
 				2CE6240E2AE6797A007CCB76 /* APISession.swift in Sources */,
 				2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */,
 				2CE624182AE6A9A2007CCB76 /* SwitchCurrencyButton.swift in Sources */,
+				2C1C35B72AF5654900871246 /* GroupedBackgroundStyle.swift in Sources */,
 				2CE624072AE66E43007CCB76 /* Ticker+Previews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
