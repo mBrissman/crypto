@@ -15,5 +15,20 @@ struct GroupedBackgroundStyle: ShapeStyle {
 }
 
 extension ShapeStyle where Self == GroupedBackgroundStyle {
-    static var groupedBackground: GroupedBackgroundStyle { GroupedBackgroundStyle() }
+    static var groupedBackground: GroupedBackgroundStyle {
+        GroupedBackgroundStyle()
+    }
+}
+
+struct SecondaryGroupedBackgroundStyle: ShapeStyle {
+
+    func resolve(in environment: EnvironmentValues) -> some ShapeStyle {
+        Color(uiColor: .secondarySystemGroupedBackground)
+    }
+}
+
+extension ShapeStyle where Self == SecondaryGroupedBackgroundStyle {
+    static var secondaryGroupedBackground: SecondaryGroupedBackgroundStyle {
+        SecondaryGroupedBackgroundStyle()
+    }
 }
