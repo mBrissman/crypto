@@ -8,7 +8,7 @@
 import SwiftUI
 
 private struct CurrencyEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Binding<Currency> = .constant(.usd)
+    static let defaultValue: Binding<Currency> = .constant(.dollar)
 }
 
 extension EnvironmentValues {

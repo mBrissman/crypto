@@ -27,9 +27,13 @@ extension Ticker {
             percentChangeSinceOneHour: 0.234,
             percentChangeSinceOneDay: 0,
             percentChangeSinceOneWeek: -0.045,
-            price: Price(
+            priceInBitcoin: Price(
                 amount: Double.random(in: 0...99999),
-                currency: .usd
+                currency: .bitcoin
+            ),
+            priceInDollar: Price(
+                amount: Double.random(in: 0...99999),
+                currency: .dollar
             ),
             symbol: symbol
         )

@@ -11,7 +11,7 @@ import SwiftUI
 struct CryptoApp: App {
 
     // Currency selected by the user.
-    @State private var currency: Currency = .usd
+    @State private var currency: Currency = .dollar
 
     var body: some Scene {
         WindowGroup {

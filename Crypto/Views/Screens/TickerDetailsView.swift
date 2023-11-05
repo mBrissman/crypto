@@ -13,8 +13,8 @@ struct TickerDetailsView: View {
 
     let ticker: Ticker
 
-    var price: Price {
-        ticker.price(with: currency.wrappedValue)
+    private var price: Price {
+        ticker.price(in: currency.wrappedValue)
     }
 
     var body: some View {

@@ -14,20 +14,20 @@ struct SwitchCurrencyButton: View {
 
     var body: some View {
         Button(action: toggleCurrency) {
-            if currency.wrappedValue == .usd {
-                Label("Switch to SEK", systemImage: "swedishkronasign.arrow.circlepath")
+            if currency.wrappedValue == .dollar {
+                Label("Switch to bitcoin", systemImage: "bitcoinsign.arrow.circlepath")
             } else {
-                Label("Switch to USD", systemImage: "dollarsign.arrow.circlepath")
+                Label("Switch to dollar", systemImage: "dollarsign.arrow.circlepath")
             }
         }
     }
 
     private func toggleCurrency() {
         withAnimation {
-            if currency.wrappedValue == .usd {
-                self.currency.wrappedValue = .sek
+            if currency.wrappedValue == .dollar {
+                self.currency.wrappedValue = .bitcoin
             } else {
-                self.currency.wrappedValue = .usd
+                self.currency.wrappedValue = .dollar
             }
         }
     }

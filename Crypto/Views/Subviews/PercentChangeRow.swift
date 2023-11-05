@@ -38,7 +38,6 @@ struct PercentChangeRow: View {
                 Image(systemName: "chevron.down.square.fill")
             default:
                 Image(systemName: "dot.square.fill")
-
             }
         }
         .foregroundStyle(.valueChange(for: change))

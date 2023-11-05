@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Currency: Equatable {
+enum Currency: Hashable {
+    case bitcoin
+    case dollar
 
-    /// Currency ISO code.
-    let code: String
-
-    /// Exchange rate from one dollar to the currency.
-    let exchangeRate: Double
-}
-
-extension Currency {
-    static let sek = Currency(code: "sek", exchangeRate: 11.0428)
-    static let usd = Currency(code: "usd", exchangeRate: 1)
+    var code: String {
+        switch self {
+        case .bitcoin:
+            return "btc"
+        case .dollar:
+            return "usd"
+        }
+    }
 }

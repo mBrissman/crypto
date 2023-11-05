@@ -14,17 +14,37 @@ struct Ticker: Identifiable {
     let percentChangeSinceOneHour: Double
     let percentChangeSinceOneDay: Double
     let percentChangeSinceOneWeek: Double
-    let price: Price
+    let priceInBitcoin: Price
+    let priceInDollar: Price
     let symbol: String
 
-    init(id: String, name: String, percentChangeSinceOneHour: Double, percentChangeSinceOneDay: Double, percentChangeSinceOneWeek: Double, price: Price, symbol: String) {
+    init(id: String,
+         name: String,
+         percentChangeSinceOneHour: Double,
+         percentChangeSinceOneDay: Double,
+         percentChangeSinceOneWeek: Double,
+         priceInBitcoin: Price,
+         priceInDollar: Price,
+         symbol: String) {
         self.id = id
         self.name = name
         self.percentChangeSinceOneHour = percentChangeSinceOneHour
         self.percentChangeSinceOneDay = percentChangeSinceOneDay
         self.percentChangeSinceOneWeek = percentChangeSinceOneWeek
-        self.price = price
+        self.priceInBitcoin = priceInBitcoin
+        self.priceInDollar = priceInDollar
         self.symbol = symbol
+    }
+}
+
+extension Ticker {
+    func price(in currency: Currency) -> Price {
+        switch currency {
+        case .bitcoin:
+            return priceInBitcoin
+        case .dollar:
+            return priceInDollar
+        }
     }
 }
 
@@ -36,7 +56,8 @@ extension Ticker: Decodable {
         case percentChangeSinceOneDay = "percent_change_24h"
         case percentChangeSinceOneHour = "percent_change_1h"
         case percentChangeSinceOneWeek = "percent_change_7d"
-        case price = "price_usd"
+        case priceInDollar = "price_usd"
+        case priceInBitcoin = "price_btc"
         case symbol
     }
 
@@ -45,23 +66,16 @@ extension Ticker: Decodable {
         self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.symbol = try container.decode(String.self, forKey: .symbol)
-
-        // Convert change strings to double
         self.percentChangeSinceOneHour = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneHour)
         self.percentChangeSinceOneDay = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneDay)
         self.percentChangeSinceOneWeek = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneWeek)
 
-        // Convert price string to price object
-        let amount = try container.decodeDoubleFromString(forKey: .price)
-        self.price = Price(amount: amount, currency: .usd)
-    }
-}
+        // Convert price strings to price objects
+        let bitcoinPriceAmount = try container.decodeDoubleFromString(forKey: .priceInBitcoin)
+        self.priceInBitcoin = Price(amount: bitcoinPriceAmount, currency: .bitcoin)
 
-extension Ticker {
-
-    /// Returns price converted to currency.
-    func price(with currency: Currency) -> Price {
-        Price(amount: price.amount * currency.exchangeRate, currency: currency)
+        let dollarPriceAmount = try container.decodeDoubleFromString(forKey: .priceInDollar)
+        self.priceInDollar = Price(amount: dollarPriceAmount, currency: .dollar)
     }
 }
 
