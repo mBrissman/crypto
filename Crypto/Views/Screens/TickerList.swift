@@ -37,13 +37,17 @@ struct TickerList: View {
     @ViewBuilder
     private func emptyView() -> some View {
         if viewModel.filteredTickers.isEmpty {
-            if viewModel.isRefreshing {
-                ProgressView()
-            } else {
-                Text("No currencies found")
-                    .font(.headline)
-                    .foregroundStyle(.secondary)
+            Group {
+                if viewModel.isRefreshing {
+                    ProgressView()
+                } else {
+                    Text("No currencies found")
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.groupedBackground)
         }
     }
 }
