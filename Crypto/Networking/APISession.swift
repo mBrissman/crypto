@@ -38,9 +38,6 @@ final class APISession {
 
     /// Returns data for request if connected to internet, returns cached data otherwise.
     private func data(for request: URLRequest) async throws -> (Data, URLResponse) {
-        guard session.configuration.waitsForConnectivity == false else {
-            return try cachedData(for: request)
-        }
         do {
             return try await session.data(for: request)
         } catch let error as URLError where error.code == .notConnectedToInternet {
