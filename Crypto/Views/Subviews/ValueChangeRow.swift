@@ -1,5 +1,5 @@
 //
-//  PercentChangeRow.swift
+//  ValueChangeRow.swift
 //  Crypto
 //
 //  Created by Marcus Brissman on 2023-11-03.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PercentChangeRow: View {
+struct ValueChangeRow: View {
 
     let titleKey: LocalizedStringKey
     let change: Double
@@ -46,8 +46,8 @@ struct PercentChangeRow: View {
 
 #Preview {
     VStack {
-        PercentChangeRow("Change", change: 0.234)
-        PercentChangeRow("Change", change: 0)
-        PercentChangeRow("Change", change: -0.045)
+        ValueChangeRow("Change", change: 0.234)
+        ValueChangeRow("Change", change: 0)
+        ValueChangeRow("Change", change: -0.045)
     }
 }

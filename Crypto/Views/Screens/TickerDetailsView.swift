@@ -47,9 +47,9 @@ struct TickerDetailsView: View {
         VStack(alignment: .leading, spacing: 16) {
             Text("Change")
                 .font(.headline)
-            PercentChangeRow("Hour", change: ticker.percentChangeSinceOneHour)
-            PercentChangeRow("Day", change: ticker.percentChangeSinceOneDay)
-            PercentChangeRow("Week", change: ticker.percentChangeSinceOneWeek)
+            ValueChangeRow("Hour", change: ticker.percentChangeSinceOneHour)
+            ValueChangeRow("Day", change: ticker.percentChangeSinceOneDay)
+            ValueChangeRow("Week", change: ticker.percentChangeSinceOneWeek)
         }
         .padding()
         .background(.secondaryGroupedBackground, in: RoundedRectangle(cornerRadius: 8))

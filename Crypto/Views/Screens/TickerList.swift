@@ -49,5 +49,5 @@ struct TickerList: View {
 }
 
 #Preview {
-    TickerList(viewModel: TickerListModel())
+    TickerList()
 }
