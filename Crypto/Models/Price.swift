@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Price {
+struct Price: Equatable {
     let amount: Double
     let currency: Currency
 }

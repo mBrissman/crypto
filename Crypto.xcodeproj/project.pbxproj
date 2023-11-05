@@ -10,6 +10,9 @@
 		2C1C35B72AF5654900871246 /* GroupedBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */; };
 		2C1C35BD2AF5B27E00871246 /* PercentChangeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C35BC2AF5B27E00871246 /* PercentChangeRow.swift */; };
 		2C3774282AF546C3001026E3 /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */; };
+		2C38E55F2AF7A7AE00C2C741 /* Tickers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C38E55E2AF7A7AE00C2C741 /* Tickers.json */; };
+		2C38E5602AF7AA1700C2C741 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
+		2C38E5612AF7AC0F00C2C741 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240D2AE6797A007CCB76 /* APISession.swift */; };
 		2CE623D92AE65E7B007CCB76 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */; };
 		2CE623DB2AE65E7B007CCB76 /* TickerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE623DA2AE65E7B007CCB76 /* TickerList.swift */; };
 		2CE623DD2AE65E7D007CCB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE623DC2AE65E7D007CCB76 /* Assets.xcassets */; };
@@ -24,10 +27,9 @@
 		2CE624162AE69A91007CCB76 /* TickerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624152AE69A91007CCB76 /* TickerDetailsView.swift */; };
 		2CE624182AE6A9A2007CCB76 /* SwitchCurrencyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */; };
 		2CE6241A2AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624192AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift */; };
-		2CE624222AE6B9D1007CCB76 /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624212AE6B9D1007CCB76 /* CryptoTests.swift */; };
+		2CE624222AE6B9D1007CCB76 /* DecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624212AE6B9D1007CCB76 /* DecodingTests.swift */; };
 		2CE624292AE6BB2C007CCB76 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624042AE66840007CCB76 /* Ticker.swift */; };
 		2CE6242A2AE6BB40007CCB76 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE624112AE68358007CCB76 /* Currency.swift */; };
-		2CE6242B2AE6BB4B007CCB76 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6240F2AE68327007CCB76 /* Price.swift */; };
 		2CE6242E2AE6BDA4007CCB76 /* ValueChangeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE6242D2AE6BDA4007CCB76 /* ValueChangeStyle.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 		2C1C35B62AF5654900871246 /* GroupedBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedBackgroundStyle.swift; sourceTree = "<group>"; };
 		2C1C35BC2AF5B27E00871246 /* PercentChangeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentChangeRow.swift; sourceTree = "<group>"; };
 		2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModifier.swift; sourceTree = "<group>"; };
+		2C38E55E2AF7A7AE00C2C741 /* Tickers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tickers.json; sourceTree = "<group>"; };
 		2CE623D52AE65E7B007CCB76 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE623D82AE65E7B007CCB76 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		2CE623DA2AE65E7B007CCB76 /* TickerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerList.swift; sourceTree = "<group>"; };
@@ -61,7 +64,7 @@
 		2CE624172AE6A9A2007CCB76 /* SwitchCurrencyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCurrencyButton.swift; sourceTree = "<group>"; };
 		2CE624192AE6AE88007CCB76 /* CurrencyEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEnvironmentKey.swift; sourceTree = "<group>"; };
 		2CE6241F2AE6B9D1007CCB76 /* CryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CE624212AE6B9D1007CCB76 /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
+		2CE624212AE6B9D1007CCB76 /* DecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingTests.swift; sourceTree = "<group>"; };
 		2CE6242D2AE6BDA4007CCB76 /* ValueChangeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueChangeStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +111,14 @@
 				2C3774272AF546C3001026E3 /* ErrorAlertModifier.swift */,
 			);
 			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		2C38E55D2AF7A79000C2C741 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C38E55E2AF7A7AE00C2C741 /* Tickers.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		2CE623CC2AE65E7B007CCB76 = {
@@ -184,7 +195,8 @@
 		2CE624202AE6B9D1007CCB76 /* CryptoTests */ = {
 			isa = PBXGroup;
 			children = (
-				2CE624212AE6B9D1007CCB76 /* CryptoTests.swift */,
+				2CE624212AE6B9D1007CCB76 /* DecodingTests.swift */,
+				2C38E55D2AF7A79000C2C741 /* Resources */,
 			);
 			path = CryptoTests;
 			sourceTree = "<group>";
@@ -303,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C38E55F2AF7A7AE00C2C741 /* Tickers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C38E5612AF7AC0F00C2C741 /* APISession.swift in Sources */,
 				2CE6242A2AE6BB40007CCB76 /* Currency.swift in Sources */,
-				2CE6242B2AE6BB4B007CCB76 /* Price.swift in Sources */,
-				2CE624222AE6B9D1007CCB76 /* CryptoTests.swift in Sources */,
+				2C38E5602AF7AA1700C2C741 /* Price.swift in Sources */,
+				2CE624222AE6B9D1007CCB76 /* DecodingTests.swift in Sources */,
 				2CE624292AE6BB2C007CCB76 /* Ticker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

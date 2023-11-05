@@ -66,9 +66,9 @@ extension Ticker: Decodable {
         self.id = try container.decode(String.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.symbol = try container.decode(String.self, forKey: .symbol)
-        self.percentChangeSinceOneHour = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneHour)
-        self.percentChangeSinceOneDay = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneDay)
-        self.percentChangeSinceOneWeek = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneWeek)
+        self.percentChangeSinceOneHour = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneHour) / 100
+        self.percentChangeSinceOneDay = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneDay) / 100
+        self.percentChangeSinceOneWeek = try container.decodeDoubleFromString(forKey: .percentChangeSinceOneWeek) / 100
 
         // Convert price strings to price objects
         let bitcoinPriceAmount = try container.decodeDoubleFromString(forKey: .priceInBitcoin)

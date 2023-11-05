@@ -72,7 +72,7 @@ enum APISessionError: Error {
     case noCachedResponse
 }
 
-private extension APISession {
+extension APISession {
     struct Result: Decodable {
         let data: [Ticker]
     }
